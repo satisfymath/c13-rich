@@ -207,8 +207,10 @@ def install(
         )
 
     try:  # pragma: no cover
+        import builtins
+
         # if within ipython, use customized traceback
-        ip = get_ipython()  # type: ignore[name-defined]
+        ip = getattr(builtins, "get_ipython")()
         ipy_excepthook_closure(ip)
         return sys.excepthook
     except Exception:
