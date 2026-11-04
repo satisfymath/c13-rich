@@ -251,6 +251,8 @@ def _split_text(
         return "", text
 
     spans, cell_length = split_graphemes(text, unicode_version)
+    if cell_position >= cell_length:
+        return text, ""
 
     # Guess initial offset
     offset = int((cell_position / cell_length) * len(spans))
