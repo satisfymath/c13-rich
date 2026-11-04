@@ -12,7 +12,7 @@ install(suppress=[click])
 
 @click.command()
 @click.option("--count", default=1, help="Number of greetings.")
-def hello(count):
+def hello(count, name="World"):
     """Simple program that greets NAME for a total of COUNT times."""
     1 / 0
     for x in range(count):
