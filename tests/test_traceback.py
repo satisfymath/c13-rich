@@ -84,7 +84,7 @@ def get_exception() -> Traceback:
         try:
             foo(0)
         except:
-            foobarbaz
+            raise NameError("name 'foobarbaz' is not defined")
     except:
         tb = Traceback()
         return tb
