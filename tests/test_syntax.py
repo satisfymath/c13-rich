@@ -448,6 +448,6 @@ if __name__ == "__main__":
         ),
         padding=0,
     )
-    rendered = render(markdown)
+    rendered = render(syntax)
     print(rendered)
     print(repr(rendered))

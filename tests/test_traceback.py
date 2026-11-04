@@ -84,7 +84,7 @@ def get_exception() -> Traceback:
         try:
             foo(0)
         except:
-            foobarbaz
+            raise NameError("foobarbaz")
     except:
         tb = Traceback()
         return tb
